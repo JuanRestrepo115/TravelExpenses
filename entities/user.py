@@ -1,6 +1,3 @@
-from entities import expense
-from entities import trip
-from datetime import date
 
 class User:
     def __init__(self, user_id: int, username: str, email: str, password: str):
@@ -9,11 +6,35 @@ class User:
         self._email = email
         self._password = password
 
-    def makeExpense():
-        pass
+    # Getters
+    @property
+    def user_id(self) -> int:
+        return self._user_id
 
-    def makeTrip(trip: trip):
-        pass   
+    @property
+    def username(self) -> str:
+        return self._username
+
+    @property
+    def email(self) -> str:
+        return self._email
+
+    @property
+    def password(self) -> str:
+        return self._password
+
+    # Setters
+    @username.setter
+    def username(self, value: str):
+        self._username = value
+
+    @email.setter
+    def email(self, value: str):
+        self._email = value
+
+    @password.setter
+    def password(self, value: str):
+        self._password = value
 
 
     def __repr__(self):
