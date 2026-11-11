@@ -1,13 +1,4 @@
-from db.connection import init_db, SessionLocal
+import uvicorn
 
 if __name__ == "__main__":
-    
-    init_db()
-
-
-    session = SessionLocal()
-    try:
-        
-        print("Sesión de base de datos abierta correctamente.")
-    finally:
-        session.close()
+    uvicorn.run("main_api:app", host="127.0.0.1", port=8000, reload=True)
